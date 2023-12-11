@@ -5,13 +5,13 @@
     <title>Document</title>
   </head>
   <body>
-    <head th:replace="~{user/layouts/head}"></head>
+    <head th:replace="~{user/components/head}"></head>
 
   <body class="goto-here">
     <div th:replace="~{user/components/nav}"></div>
 
     <div layout:fragment="content"></div>
-    <footer th:replace="~{user/layouts/footer}"></footer>
+    <footer th:replace="~{user/components/footer}"></footer>
     <!-- loader -->
     <div th:replace="~{user/components/loader}"></div>
   </body>
