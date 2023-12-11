@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Layout</title>
+  </head>
+  <body>
+    <head th:replace="~{admin/components/head}"></head>
+
+    <div class="layout-wrapper layout-content-navbar" >
+        <div class="layout-container">
+            <aside th:replace="~{admin/components/sidebar}"></aside>
+
+            <div class="layout-page">
+
+            <nav th:replace="~{admin/components/nav}"></nav>
+            <div layout:fragment="content"></div>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="~{admin/components/footer}"></footer>
+  </body>
+</html>
