@@ -1,0 +1,18 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <head th:replace="~{user/layouts/head}"></head>
+
+  <body class="goto-here">
+    <div th:replace="~{user/components/nav}"></div>
+
+    <div layout:fragment="content"></div>
+    <footer th:replace="~{user/layouts/footer}"></footer>
+    <!-- loader -->
+    <div th:replace="~{user/components/loader}"></div>
+  </body>
+</html>
