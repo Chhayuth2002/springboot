@@ -9,4 +9,5 @@ public class ProductController {
     public String index () {
         return "admin/pages/product/index";
     }
+
 }
