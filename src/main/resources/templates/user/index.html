@@ -7,12 +7,23 @@
     <section id="home-section" class="hero">
       <div class="home-slider owl-carousel">
         <div
-          
+          th:each="slideshow : ${slideshows}"
           class="slider-item"
-          style="background-image: url(user/images/bg_1.jpg)"
         >
+        <img th:src="@{${'../image/img/elements/' + slideshow.img}}" style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            "/>
           <div class="overlay"></div>
-          <div class="container">s
+          <div class="container">
             <div
               class="row slider-text justify-content-center align-items-center"
               data-scrollax-parent="true"
@@ -27,27 +38,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div
-          class="slider-item"
-          style="background-image: url(user/images/bg_2.jpg)"
-        >
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row slider-text justify-content-center align-items-center"
-              data-scrollax-parent="true"
-            >
-              <div class="col-sm-12 ftco-animate text-center">
-                <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
-                <h2 class="subheading mb-4">
-                  We deliver organic vegetables &amp; fruits
-                </h2>
-                <p><a href="#" class="btn btn-primary">View Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
 
