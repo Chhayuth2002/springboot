@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class SlideController {
@@ -23,4 +25,10 @@ public class SlideController {
         model.addAttribute("page","slideshow");
         return "admin/pages/slideshow/index";
     }
+
+    @GetMapping("admin/slideshow/insert")
+    public String Insert(Model model) {
+        return "admin/pages/slideshow/insert";
+    }
+    
 }
