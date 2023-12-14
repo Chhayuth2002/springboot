@@ -10,25 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @Controller
+@RequestMapping("/admin/slideshow")
 public class SlideController {
     @Autowired
     SlideshowRepo slideshowRepo;
 
-    @GetMapping("admin/slideshow")
-    public String slideshow(Model model){
+    @GetMapping
+    public String getAllSlide(Model model){
         List<Slideshow> slideshows = slideshowRepo.findAll();
         model.addAttribute("slideshows", slideshows);
         model.addAttribute("page","slideshow");
         return "admin/pages/slideshow/index";
     }
-
-    @GetMapping("admin/slideshow/insert")
-    public String Insert(Model model) {
-        return "admin/pages/slideshow/insert";
-    }
-    
 }
